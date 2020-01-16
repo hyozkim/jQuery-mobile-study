@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<title></title>
+<head>
+    <!-- viewport > 뿌려주는거, initial-scale > 확대 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Include jQuery Mobile stylesheets -->
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+    <!-- Include the jQuery library -->
+    <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <!-- Include the jQuery Mobile library -->
+    <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+</head>
+
+<style>
+    #mobileTitle {
+        background-color: #346bb2;
+        color:#FFBA46;
+        text-shadow:0 0px 0 #fff;
+    }
+
+    #mobileFooter {
+        background-color: #346bb2;
+        color:#FFBA46;
+        text-shadow:0 0px 0 #fff;
+    }
+
+    #table_schedule {
+        border:1px solid black;
+    }
+</style>
+
+<script>
+    $(function() {
+        $('#back').click(function() {
+            location.href = 'main.html';
+        });
+    });
+</script>
+
+<body>    
+
+    <div data-role="page">
+        <!-- 패널 작성 -->
+    <div data-role="panel" data-position="left" data-position-fixed="true" data-display="overlay" data-theme="a" id="add-form">
+            <form class="userform">
+                <h2 style="color:#346bb2;" >경기 일정</h2>
+                <label for="name">날짜:</label>
+                <input type="text" name="name" id="name" value="" data-clear-btn="true" data-mini="true">
+                <label for="password">시간:</label>
+                <input type="password" name="password" id="password" value="" data-clear-btn="true" autocomplete="off" data-mini="true">
+                <label for="email">스타디움:</label>
+                <input type="text" name="email" id="email" value="" data-clear-btn="true" data-mini="true">
+                <label for="phone">섹터:</label>
+                <input type="text" name="phone" id="phone" value="" data-clear-btn="true" data-mini="true">
+                <label for="sex">구분:</label>
+                <fieldset data-role="controlgroup" data-type="horizontal">
+                    <input type="radio" name="radio-choice-h-3" id="man" value="man" checked="checked">
+                    <label for="man">HOME</label>
+                    <input type="radio" name="radio-choice-h-3" id="woman" value="woman">
+                    <label for="woman">AWAY</label>
+                </fieldset>
+                <fieldset class="ui-grid-a">
+                    <center>
+                        <a href="#" id="save" class="ui-btn ui-btn-b ui-corner-all ui-btn-inline" value="검색" data-rel="submit">검색</a>
+                        <a href="#" class="ui-btn ui-btn-a ui-corner-all ui-btn-inline" value="취소" data-rel="close">닫기</a>
+                    </center>
+                </fieldset>  
+            </form>
+        </div>
+        <!-- 패널 작성(끝) -->
+
+        <!-- header -->
+        <div data-role='header' id='mobileTitle' data-position="fixed" >
+            <h1>Golden State</h1>
+            <button id='back' class='ui-btn-left'>back</button>
+            <a href="C:/Users/sa833/Desktop/study/jMobile/index.html" class="ui-btn-right">로그아웃</a>
+        </div>
+
+        <!-- main -->
+        <div data-role='main' class='ui-content'>
+            <a href="#add-form" class='ui-btn ui-btn-a'>Panel-test</a>
+            준비중입니다. ^^;;
+        </div>
+
+        <!-- footer -->
+        <div data-role='footer' data-position='fixed' id='mobileFooter'>
+            <h1>Let's go Warriors</h1>
+        </div>
+    </div>
+</body>
+</html>

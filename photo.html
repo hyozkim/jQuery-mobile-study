@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<title></title>
+<head>
+    <!-- viewport > 뿌려주는거, initial-scale > 확대 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Include jQuery Mobile stylesheets -->
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+    <!-- Include the jQuery library -->
+    <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <!-- Include the jQuery Mobile library -->
+    <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <link rel="stylesheet" href="css/photo.css">
+</head>
+
+<style>
+    #mobileTitle {
+        background-color: #346bb2;
+        color:#FFBA46;
+        text-shadow:0 0px 0 #fff;
+    }
+
+    #mobileFooter {
+        background-color: #346bb2;
+        color:#FFBA46;
+        text-shadow:0 0px 0 #fff;
+    }
+</style>
+
+<script>
+
+$(function() {
+    $('#back').click(function() {
+        location.href = 'main.html';
+    });
+});
+</script>
+
+<body>    
+    <div data-role="page">
+        <!-- header -->
+        <div data-role='header' id='mobileTitle'>
+            <h1>Golden State</h1>
+            <button id='back' class='ui-btn-left'>back</button>
+            <a href="C:/Users/sa833/Desktop/study/jMobile/index.html" class="ui-btn-right">로그아웃</a>
+        </div>
+
+        <!-- main -->
+        <div data-role='main' class='ui-content'>
+            <!-- <table data-role="table" id="phone-table" data-mode="columntoggle" data-column-btn-text="View.." data-column-btn-theme="a" class="phone-compare ui-shadow table-stroke">
+                  <thead>
+                    <tr>
+                      <th class="label">Player</th>
+                    <th>
+                        <h4>Stephen Curry</h4>
+                        <h3>Guard</h3>
+                    </th>
+                    <th data-priority="1">
+                        <h4>Kevin Durant</h4>
+                        <h3>Forward</h3>
+                    </th>
+                    <th data-priority="2">
+                        <h4>Klay Tomson</h4>
+                        <h3>Guard</h3>
+                    </th>
+                    <th data-priority="3">
+                        <h4>Draymond Green</h4>
+                        <h3>Forward</h3>
+                    </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr class="photos">
+                      <th class="label">Photo</th>
+                      <td><a href="#img-curry" data-rel="popup" data-position-to="window"><img src="images/curry.jpg"></a></td>
+                      <td><a href="#img-durant" data-rel="popup" data-position-to="window"><img src="images/durant.jpg"></a></td>
+                      <td><a href="#img-tomson" data-rel="popup" data-position-to="window"><img src="images/tomson.jpg"></a></td>
+                      <td><a href="#img-green" data-rel="popup" data-position-to="window"><img src="images/green.jpg"></a></td>
+                    </tr>
+                    <tr>
+                      <th class="label">Height</th>
+                      <td>4.87"</td>
+                      <td>5.38"</td>
+                      <td>5.11"</td>
+                      <td>5.3"</td>
+                    </tr>
+                    <tr>
+                      <th class="label">Width</th>
+                      <td>2.31"</td>
+                      <td>2.78"</td>
+                      <td>2.79"</td>
+                      <td>2.75"</td>
+                    </tr>
+                    <tr>
+                      <th class="label">Depth</th>
+                      <td>0.3"</td>
+                      <td>0.34"</td>
+                      <td>0.42"</td>
+                      <td>0.37"</td>
+                    </tr>
+                    <tr>
+                      <th class="label">Weight (lbs.)</th>
+                      <td>0.25</td>
+                      <td>0.29</td>
+                      <td>0.41</td>
+                      <td>0.29</td>
+                    </tr>
+                  </tbody>
+                </table> 
+
+                <div id="img-curry" data-role="popup" data-overlay-theme="a">
+                    <img src="images/curry.jpg">
+                </div>
+                <div id="img-durant" data-role="popup" data-overlay-theme="a">
+                    <img src="../_assets/img/phone_onex.png">
+                </div>
+                <div id="img-tomson" data-role="popup" data-overlay-theme="a">
+                    <img src="images/tomson.jpg">
+                </div>
+                <div id="img-green" data-role="popup" data-overlay-theme="a">
+                    <img src="images/green.jpg">
+                </div>
+            -->
+            <center>
+                <a href="#popupCurry" data-rel="popup" data-position-to="window" data-transition="fade"><img class="popphoto" src="images/curry.jpg" alt="Stephen Curry" style="width:100%"></a>
+                <a href="#popupTomson" data-rel="popup" data-position-to="window" data-transition="fade"><img class="popphoto" src="images/tomson.jpg" alt="Klay Tomson" style="width:100%"></a>
+                <a href="#popupGreen" data-rel="popup" data-position-to="window" data-transition="fade"><img class="popphoto" src="images/green.jpg" alt="Draymond Green" style="width:100%"></a>
+            </center>
+            <div data-role="popup" id="popupCurry" data-overlay-theme="b" data-theme="b" data-corners="false">  
+                <a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a><img class="popphoto" src="images/curry.jpg" style="max-height:512px;" alt="Stephen Curry">
+            </div>
+            <div data-role="popup" id="popupTomson" data-overlay-theme="b" data-theme="b" data-corners="false">
+                <a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a><img class="popphoto" src="images/tomson.jpg" style="max-height:512px;" alt="Klay Tomson">
+            </div>
+            <div data-role="popup" id="popupGreen" data-overlay-theme="b" data-theme="b" data-corners="false">
+                <a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a><img class="popphoto" src="images/green.jpg" style="max-height:512px;" alt="Draymond Green">
+            </div> 
+        </div> 
+
+        
+        <div data-role='footer' data-position='fixed' id='mobileFooter'>
+            <h1>Let's go Warriors</h1>
+        </div> 
+    </div>
+</body>
+
+</html>

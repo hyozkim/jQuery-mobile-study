@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<title>jQuery Mobile Study</title>
+<head>
+    <!-- viewport > 뿌려주는거, initial-scale > 확대 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Include jQuery Mobile stylesheets -->
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+    <!-- Include the jQuery library -->
+    <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <!-- Include the jQuery Mobile library -->
+    <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+</head>
+
+<style>
+    #header, #finish {
+        background-color: #346bb2;
+        color:white;
+        text-shadow:0 0px 0 #fff;
+    }
+
+    #saveBtn {
+        background-color: #346bb2;
+        color:white;
+        text-shadow:0 0px 0 #fff;
+    }
+</style>
+
+<script>
+
+$(function() {
+    $('#finishBtn').click(function() {
+        if( isBlank($('#id').val()) )  {
+            alert('아이디를 입력하십시오');
+            return ;     
+        } else if ( isBlank($('#passwd').val() )) {
+            alert('비밀번호를 입력하십시오.');
+            return ;
+        } else if ( isBlank($('#phonenum').val() )) {
+            alert('휴대폰번호를 입력하십시오.');
+            return ;
+        } else if ( isBlank($('#email').val() )) {
+            alert('이메일을 입력하십시오.');
+            return ;
+        } else if ( isBlank($('#address').val() )) {
+            alert('주소를 입력하십시오.');
+            return ;
+        }
+
+        location.href = 'index.html';
+    });
+
+    $('#saveBtn').click(function() {
+        location.href = 'index.html';
+    });
+});
+
+
+function isBlank (value)  {  
+    if( value == null || value.length == 0 ) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
+</script>
+
+<body>
+    <div data-role='page'>
+        <div id='header' data-role='header'>
+            <h2>회원가입</h2>
+        </div>
+
+        <form>
+            <div data-role='main' class='ui-content'>
+                <label for='id'>아이디</label>
+                <input id='id' type='text' placeholder='Id' data-clear-btn="true" data-mini="true"/>
+                <label for='passwd'>패스워드</label>
+                <input id='passwd' type='password' placeholder='Password' data-clear-btn="true" data-mini="true"/>
+                <label for='phonenum'>휴대폰번호</label>
+                <input id='phonenum' type='text' placeholder='Phone Number(- 제외)' data-clear-btn="true" data-mini="true"/>
+                <label for='email'>이메일</label>
+                <input id='email' type='text' placeholder='Email' data-clear-btn="true" data-mini="true"/>
+                <label for='address'>주소</label>
+                <input id='address' type='text' placeholder='Address' data-clear-btn="true" data-mini="true"/>
+
+                <center>
+                    <a href="index.html" id="saveBtn" data-role="button" data-inline="true">저장</a>
+                    <a href="index.html" data-role="button" data-inline="true" >취소</a>
+                </center>
+            </div>
+        
+            <!-- <div data-role='footer' data-position='fixed'>
+                <div data-role='navbar'>
+                    
+                </div>
+            </div> -->
+        </form>
+    </div>
+
+
+</body>
+
+</html>

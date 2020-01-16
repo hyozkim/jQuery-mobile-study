@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<title></title>
+<head>
+    <!-- viewport > 뿌려주는거, initial-scale > 확대 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Include jQuery Mobile stylesheets -->
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+    <!-- Include the jQuery library -->
+    <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <!-- Include the jQuery Mobile library -->
+    <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+    <link rel="stylesheet" href="css/snap.css" />
+    <script src="js/snap.js"></script>
+    <script src="js/keyword.js"></script>
+</head>
+
+<style>
+    #mobileTitle {
+        background-color: #346bb2;
+        color:white;
+        text-shadow:0 0px 0 #fff;
+    }
+</style>
+
+<body>
+    <div data-role='page'>
+        <!-- 메뉴 시작 -->
+        <div id='leftMenu'>
+            <!-- 내용 -->
+            <div id='menu'>
+                <input type='search' id='keyword' placeholder='검색어를 입력하십시오.' />
+                <!-- data-inset : 레이아웃 전체 테두리를 둥글게 할거냐 -->
+                <ul data-role='listview' data-inset='true' id='listview'>
+                    <li><a href="#">경기 기록</a></li>
+                    <li><a href="#">경기 일정</a></li>
+                    <li><a href="#">연승 기록</a></li>
+                    <li><a href="#">구단 순위</a></li>
+                    <li><a href="#">하이라이트</a></li>
+                    <li><a href="#">올해의 MVP</a></li>
+                    <li><a href="#">선수 개인기록</a></li>
+                    <li><a href="#">명예의 전당</a></li>
+                </ul>
+            </div>
+
+            <!-- 버튼 -->
+            <div id='bar'>
+                <!-- <button type='button' id='menuBtn'>+</button> -->
+                <button id='menuBtn' class="ui-btn ui-icon-arrow-r ui-btn-icon-left ui-shadow ui-corner-all">&nbsp;</button>
+            </div>
+        </div>
+        <!-- 메뉴 끝 -->
+
+        <!-- header -->
+        <div data-role='header' id='mobileTitle'>
+            <h1>고객센터</h1>
+            <a href="C:/Users/sa833/Desktop/study/jMobile/index.html" class="ui-btn-right">로그아웃</a>
+        </div>
+
+        <!-- main -->
+        <div data-role='main' class='ui-content'>
+            <ul data-role="listview" id='listview2'>
+                <!-- 회원문의 -->
+                <li data-role='list-divider'>회원문의</li>
+                <li><a href="#popupJoin" data-rel="popup" data-transition="pop">회원가입 방법</a></li>
+                <div data-role="popup" id="popupJoin" class="ui-content ui-mini" data-theme="a" data-position-to="window">
+                    회원가입을 하기 위해서는 <a href="index.html"><strong>처음 페이지</strong></a>로 돌아가서 회원가입 버튼을 클릭하십시오.
+                </div>
+                <li><a href="#popupClose"data-rel="popup" data-transition="pop">회원탈퇴 방법</a></li>
+                <div data-role="popup" id="popupClose" class="ui-content ui-mini" data-position-to="window">
+                    회원탈퇴를 하기 위해서는 <a href="index.html">처음 페이지</a>로 돌아가서 회원탈퇴 버튼을 클릭하십시오.
+                </div>
+
+                <!-- 결제문의 -->
+                <li data-role='list-divider'>결제문의</li>
+                <li><a href="#">결제 방법</a></li>
+                <li><a href="#">환불 방법</a></li>
+
+                <!-- 기타문의 -->
+                <li data-role='list-divider'>기타문의</li>
+                <li><a href="#">고객센터 연락처</a></li>
+                <li><a href="#">비밀번호 분실 문의</a></li>
+                <li><a href="#">아이디 분실 문의</a></li> 
+            </ul>
+        </div>
+
+        <!-- footer -->
+        <div data-role='footer' data-position='fixed'>
+            <div data-role='navbar'>
+                <ul>
+                    <li stlye='width:33%' ><a class='ui-btn-active' href='C:/Users/sa833/Desktop/study/jMobile/main.html' data-ajax='false'>Home</a></li>
+                    <li stlye='width:67%' ><a href='01044264569'>고객센터 (02-000-0000)</a></a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- logout -->
+        <!-- <div data-role="popup" id="popupDialog" data-overlay-theme="b" data-theme="a" data-dismissible="false" style="max-width:400px;">
+            <div data-role="header" data-theme="a">
+            <h1>로그아웃?</h1>
+            </div>
+            <div role="main" class="ui-content">
+                <h3 class="ui-title">로그아웃 하시겠습니까?</h3>
+                <a href="#" class="ui-btn ui-corner-all ui-btn-inline" data-rel="back">취소</a>
+                <a href="C:/Users/sa833/Desktop/study/jMobile/index.html" class="ui-btn ui-corner-all ui-btn-inline" data-transition="flow" >로그아웃</a>
+            </div>
+        </div> -->
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,52 @@
+.ui-content, .ui-header, .ui-footer {
+    width:84%;
+}
+
+#leftMenu {
+    position:absolute;
+    top:0;
+    left:-64%;
+    width:80%;
+    height:100%;
+    /* border:1px solid black; */
+    background-color:white;
+    z-index:9999;
+}
+
+#leftMenu #menu {
+    float:left;
+    width:80%;
+}
+
+#leftMenu #bar {
+    float:left;
+    background-color: #FFBA46;
+    width:20%;
+    height:100%;
+    z-index:-9999;
+    box-shadow: 5px 10px 5px gray;
+}
+
+
+#rightMenu {
+    position:absolute;
+    top:0;
+    left:84%;
+    width:80%;
+    height:100%;
+    /* border:1px solid black; */
+    background-color:white;
+    z-index:9999;
+}
+
+#rightMenu #menu {
+    float:right;
+    width:80%;
+}
+
+#rightMenu #bar {
+    float:right;
+    background-color: #ACACAC;
+    width:20%;
+    height:100%;
+}

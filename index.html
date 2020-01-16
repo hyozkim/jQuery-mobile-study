@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<title>jQuery Mobile Study</title>
+<head>
+    <!-- viewport > 뿌려주는거, initial-scale > 확대 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Include jQuery Mobile stylesheets -->
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+    <!-- Include the jQuery library -->
+    <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <!-- Include the jQuery Mobile library -->
+    <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+
+</head>
+
+<style>
+    #loginBtn {
+        border-width:0px; 
+        border-radius:6px;
+        text-shadow: 0 0px 0 #f3f3f3; 
+        color: white; background-color:#346bb2;
+    }
+    #save {
+        text-shadow: 0 0px 0 #f3f3f3; 
+        color: white; 
+        background-color:#346bb2;
+    }
+    #joinBtn {
+        border-radius:6px;
+    }
+
+</style>
+
+<script>
+    
+$(function() {
+    $('#loginBtn').click(function() {
+        if( isBlank($('#id').val()) )  {
+            alert('아이디를 입력하십시오');
+            return ;     
+        } else if ( isBlank($('#passwd').val() )) {
+            alert('비밀번호를 입력하십시오.');
+            return ;
+        }
+
+        location.href = 'main.html';
+    });
+
+    $('#joinBtn').click(function() {
+        location.href = '#add-form';
+    });
+});
+
+function isBlank (value)  {  
+    if( value == null || value.length == 0 ) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
+</script>
+
+
+<body>
+    <div data-role='page'>
+        <!-- <div data-role='header'>
+            <h2>타 이 틀</h2>
+        </div> -->
+    
+    <div data-role='main' class='ui-content'>
+        <img src='./images/logo-golden-state-warriors.png' width='100%'/>
+        <input id='id' type='text' placeholder='ID' data-clear-btn='true' />
+        <input id='passwd' type='password' placeholder='Password' data-clear-btn='true' />
+        
+        <input id='cookieSaver' type='checkbox' />
+        <label for='cookieSaver'>아이디 저장</label>
+
+        <button id='loginBtn' type='button' class='ui-btn ui-btn-a ui-shadow'>로그인</button>
+        <a href="join.html" data-role="button" data-transition="slidefade" class="ui-btn ui-corner-all ui-shadow">회원가입</a>
+    </div>
+<!--
+        <div data-role='footer'>
+            종료
+        </div>
+    
+    -->
+
+
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+<title></title>
+<head>
+    <!-- viewport > 뿌려주는거, initial-scale > 확대 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Include jQuery Mobile stylesheets -->
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+    <!-- Include the jQuery library -->
+    <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <!-- Include the jQuery Mobile library -->
+    <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+    <link rel="stylesheet" href="css/snap.css" />
+    <script src="js/snap.js"></script>
+    <script src="js/keyword.js"></script>
+</head>
+
+<style>
+    #mobileTitle {
+        background-color: #346bb2;
+        color:#FFBA46;
+        text-shadow:0 0px 0 #fff;
+    }
+
+    #mobileFooter {
+        background-color: #346bb2;
+        color:#FFBA46;
+        text-shadow:0 0px 0 #fff;
+    }
+
+    .menu {
+        float:left;
+        width:90%;
+        padding: 15px 0 15px 0;
+        margin: 5px;
+        /* border:1px solid gray; */
+    }
+
+    #service {
+        display: table;
+        background:url(images/name_logo.png); 
+        background-size:100% 100%;
+        height:50px;
+    }
+
+    #schedule {
+        display: table;
+        background:url(images/stadium.jpg); 
+        background-size:100% 100%;
+    }
+
+    #score {
+        display: table;
+        background:url(images/record.jpg); 
+        background-size:100% 100%;
+    }
+
+    #gallery {
+        display: table;
+        background:url(images/players.jpg); 
+        background-size:100% 100%;
+    }
+
+    #highlight {
+        display: table;
+        background:url(images/highlight.png); 
+        background-size:100% 100%;
+    }
+    
+    .span {
+        display: table-cell; 
+        text-align:center; 
+        vertical-align:middle;
+        font-size:2em;
+        color:#FFBA46;
+    }
+    
+</style>
+<script>
+// 페이지 이동
+function pageChange(gubun) {
+    if( gubun == 1 ) {
+        // 경기일정
+        location.href = 'schedule.html';
+    } else if( gubun == 2 ) {
+        // 경기기록
+        location.href = 'records.html';
+    } else if( gubun == 3 ) {
+        // 플레이어
+        location.href = 'photo.html';
+    } else if( gubun == 4 ) {
+        // 하이라이트 
+        
+    } else if( gubun == 5 ) {
+        // 고객센터
+        location.href = 'qna.html';
+    }
+}
+</script>
+
+<body>
+    <div data-role='page'>
+        <!-- 메뉴 시작 -->
+        <div id='leftMenu'>
+            <!-- 내용 -->
+            <div id='menu'>
+                <input type='search' id='keyword' placeholder='검색어를 입력하십시오.' />
+                <!-- data-inset : 레이아웃 전체 테두리를 둥글게 할거냐 -->
+                <ul data-role='listview' data-inset='true' id='listview'>
+                    <li><a href="records.html">경기 기록</a></li>
+                    <li><a href="#">경기 일정</a></li>
+                    <li><a href="#">구단 순위</a></li>
+                    <li><a href="#">연승 기록</a></li>
+                    <li><a href="photo.html">갤러리</a></li>
+                    <li><a href="#">하이라이트</a></li>
+                    <li><a href="#">올해의 MVP</a></li>
+                    <li><a href="#">선수 개인기록</a></li>
+                    <li><a href="#">명예의 전당</a></li>
+                </ul>
+            </div>
+
+            <!-- 버튼 -->
+            <div id='bar'>
+                <!-- <button type='button' id='menuBtn'>+</button> -->
+                <button id='menuBtn' class="ui-btn ui-icon-arrow-r ui-btn-icon-left ui-shadow ui-corner-all">&nbsp;</button>
+            </div>
+        </div>
+        <!-- 메뉴 끝 -->
+        
+        <!-- header -->
+        <div data-role='header' id='mobileTitle'>
+            <h1>Golden State</h1>
+            <a href="index.html" class="ui-btn-right">로그아웃</a>
+        </div>
+
+        <!-- main -->
+        <div data-role='main' class='ui-content'>
+            <center>
+                <div id='schedule' class='menu' data-transition="slidefade" onclick="pageChange(1);" >
+                    <span class='span'>경기 일정</span>
+                </div>
+                <div id='score'class='menu' data-transition="slidefade" onclick="pageChange(2);">
+                    <span class='span'>경기 기록</span>
+                </div>
+                <div id='gallery'class='menu' data-transition="slidefade" onclick="pageChange(3);">
+                    <span class='span'>갤러리</span>
+                </div>
+                <div id='highlight'class='menu' data-transition="slidefade" onclick="pageChange(4);">
+                    <span class='span'>하이라이트</span>
+                </div>
+                <div id='service' class='menu' data-transition="slidefade" onclick="pageChange(5);">
+                    
+                </div>
+            </center>
+        </div>
+
+        <!-- onMouseOver='this.style.opacity = 1.0;' 
+        onMouseOut='this.style.opacity = 0.5;' -->
+
+        <!-- footer -->
+        <div data-role='footer' data-position='fixed' id='mobileFooter'>
+            <h1>Let's go Warriors!!</h1>
+        </div>
+    </div>
+</body>
+</html>

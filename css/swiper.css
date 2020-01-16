@@ -1,0 +1,55 @@
+#leftBtn, #rightBtn {
+    float:left;    
+}
+
+#gallery {
+    float:left;
+    height:auto;
+    overflow-x:hidden;
+}
+
+#imgList ul {
+    list-style:none;
+    margin : 0 0 0 0;
+    padding : 0 0 0 0;
+}
+
+#imgList ul li {
+    float:left;
+}
+
+#swiper {
+    height:auto;
+}
+
+#items {
+    width:100%;
+    position:absolute;
+    /* top:200px;
+    left:20px; */
+}
+
+#items ul {
+    list-style:none;
+}
+
+#items ul li {
+    float:left;
+}
+
+#items ul li .item{
+    width:15px;
+    height:15px;
+    border-radius:8px;
+    margin-right:7px;
+    border:1px solid black;
+}
+
+#items ul li .item-active {
+    width:15px;
+    height:15px;
+    border-radius:8px;
+    margin-right:7px;
+    border:1px solid black;
+    background-color:black;
+}

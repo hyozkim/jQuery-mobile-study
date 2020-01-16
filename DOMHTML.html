@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>index</title>
+    <script src="javascript">
+        window.onload = function() {
+            // 1. 기본1
+            // var header = document.createElement('h1');
+            // var textNode = document.createTextNode('Hello DOM');
+
+            // // 노드를 연결
+            // header.appendChild(textNode);
+            // document.body.appendChild(header);
+
+            // 2. 기본2 - getElementById, getElementByName, getElementByTagName
+            // var header1 = document.getElementById('header_1');
+            // var header2 = document.getElementById('header_2');
+
+            // header1.innerHTML = 'with getElementById()';
+            // header2.innerHTML = 'with getElementById()';
+
+            // 3. 기본3
+            // var clock = document.getElementById('clock');
+
+            // setInterval(function ()  {
+            //     var now = new Date();
+            //     clock.innerHTML = now.toString();
+            // },1000)
+
+            // setTimeout(function() {
+            //     alert("오즈의 순위왕 블로그로 이동합니다.");
+            //     location.href = "http://ozrank.co.kr";
+            // } ,1000) ;
+
+            // 4. 기본4
+            // var sun  = document.getElementById('sun');
+            // var earth  = document.getElementById('earth');
+            // var moon  = document.getElementById('moon');
+
+            // sun.style.position  = 'absolute';
+            // earth.style.position  = 'absolute';
+            // moon.style.position  = 'absolute';
+
+            // sun.style.left = 250 + 'px';
+            // sun.style.top = 250 + 'px';
+
+            // var earthAngle = 0;
+            // var moonAngle = 0;
+
+            // setInterval(function() {
+            //     var earthLeft = 250 + 150 * Math.cos(earthAngle);
+            //     var earthTop = 200 + 150 * Math.sine(earthAngle);
+            //     var moonLeft = earthLeft + 50 * Math.cos(moonAngle);
+            //     var moonTop = earthTop + 50 * Math.cos(moonAngle);
+
+            //     earth.style.left = earthLeft + 'px';
+            //     earth.style.top = earthLeft + 'px';
+            //     moon.style.left = moonLeft + 'px';
+            //     moon.style.top = moonLeft + 'px';
+
+            //     earthAngle += 0.1;
+            //     moonAngle += 0.3;
+
+            // }, 1000 / 30 );
+
+            // 5. 
+           
+        };
+        // XMLHttpRequest 객체를 생성합니다.
+        var request = new XMLHttpRequest();
+        request.open('GET','C:/Users/mnwise/Desktop/study/Practice/javascript/DOMHTML.html', false);
+
+        // Ajax를 수행합니다.
+        request.send();
+
+        alert(request.responseText);
+    
+    </script>
+</head>
+<body>
+    <select>
+        <option>Apple</option>
+        <option>Bag</option>
+        <option>Cat</option>
+        <option>Dog</option>
+        <option>Elephant</option>
+    </select>
+</body>
+</html>

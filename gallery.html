@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<title></title>
+<head>
+    <!-- viewport > 뿌려주는거, initial-scale > 확대 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Include jQuery Mobile stylesheets -->
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+    <!-- Include the jQuery library -->
+    <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <!-- Include the jQuery Mobile library -->
+    <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+    <link rel="stylesheet" href="css/swiper.css">
+    <script src="js/swiper.js"></script>
+</head>
+
+<style>
+    #mobileTitle {
+        background-color: #346bb2;
+        color:#FFBA46;
+        text-shadow:0 0px 0 #fff;
+    }
+
+    #mobileFooter {
+        background-color: #346bb2;
+        color:#FFBA46;
+        text-shadow:0 0px 0 #fff;
+    }    
+</style>
+<script>
+
+</script>
+
+<body>
+    <div data-role='page'>
+        <!-- header -->
+        <div data-role='header' id='mobileTitle'>
+            <h1>Golden State</h1>
+            <a href="index.html" class="ui-btn-right">로그아웃</a>
+        </div>
+
+        <!-- main -->
+        <div data-role='main' class='ui-content'>
+            <!-- 이미지 슬라이드 시작 -->
+            <div id='swipper'>
+                <img src='images/leftBtn.png' id='leftBtn' />
+                <div id='gallery'>
+                    <div id='imgList'>
+                        <ul>
+                            <li><img src='images/img1.png' /> </li>
+                            <li><img src='images/img2.png' /> </li>
+                            <li><img src='images/img3.png' /> </li>
+                            <li><img src='images/img4.png' /> </li>
+                            <li><img src='images/img5.png' /> </li>
+                        </ul>
+                    </div>
+                </div>
+                <img src='images/rightBtn.png' id='rightBtn'/>
+                <div id='items'></div>
+            </div>
+        </div>
+        <!-- 이미지 슬라이드 끝 -->
+
+        <!-- footer -->
+        <div data-role='footer' data-position='fixed' id='mobileFooter'>
+            <h1>Let's go Warriors!!</h1>
+        </div>
+    </div>
+</body>
+</html>
